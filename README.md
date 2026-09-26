@@ -1,30 +1,44 @@
-# Raja Health Prediction System
+# 🩺 Raja Health Prediction System
 
-An enterprise-grade, single-page application and API replacing the Raja Credit System. This system leverages Machine Learning to predict the likelihood of Heart Disease, Diabetes, and Breast Cancer using premium UI/UX design.
+An ML-powered web application for health-risk prediction, combining a Flask API with a browser-based dashboard.
 
-## Features
-- **3-in-1 Prediction Engine**: Heart Disease, Diabetes, Breast Cancer.
-- **Auto Model Selection**: Trains LR, RF, SVM, XGBoost and auto-selects the best algorithm per disease based on F1 Score.
-- **Premium UI**: Single HTML file with React, Tailwind CSS (Glassmorphism), and Chart.js.
-- **PDF Reports**: One-click downloadable patient reports.
-- **History Tracking**: LocalStorage-based prediction history.
-- **Analytics Dashboard**: Visual model performance metrics.
+> **Project note:** This repository currently contains the multi-disease prediction implementation described below. Model outputs are for software demonstration / educational purposes and are not medical diagnoses.
 
-## Folder Structure
-```text
-raja-health-prediction/
-├── backend/
-│   ├── app.py              # Flask REST API
-│   ├── train.py            # Model training pipeline
-│   ├── requirements.txt    # Python dependencies
-│   ├── runtime.txt         # Python version for Render
-│   └── render.yaml         # Render deployment spec
-├── frontend/
-│   └── index.html          # Complete React SPA (Zero build tools)
-├── datasets/
-│   ├── heart.csv
-│   ├── diabetes.csv
-│   └── breast-cancer.csv
-├── models/                 # Auto-generated .pkl and .json files
-├── .gitignore
-└── README.md
+## ✨ Features
+
+- ❤️ Heart disease prediction
+- 🩸 Diabetes prediction
+- 🎗️ Breast cancer prediction
+- 🤖 Automatic model comparison
+- 📊 Analytics and model metrics
+- 📄 Downloadable reports
+- 🕘 Local prediction history
+- 🌐 Flask REST API
+- 💻 React-based frontend
+
+## 🧠 ML workflow
+
+Input → preprocessing → candidate models → evaluation → selected model → prediction → explanation
+
+The project explores Logistic Regression, Random Forest, SVM, XGBoost and related evaluation workflows.
+
+## 🗂️ Repository structure
+
+- `backend/` — Flask API + model training
+- `frontend/` — Web application
+- `datasets/` — Training datasets
+- `models/` — Generated model artifacts
+- `render.yaml` — Render deployment configuration
+
+## 🌐 Deployment
+
+Live demo:
+https://theautomator-ai.github.io/raja_disease-prediction-system/
+
+## ⚠️ Disclaimer
+
+This is an educational software project. Predictions should not be used as medical advice or as a substitute for a qualified healthcare professional.
+
+## 📌 Status
+
+**Prototype / portfolio project**
